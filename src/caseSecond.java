@@ -1,5 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
+
+import javax.swing.BoxLayout;
+
 import java.applet.*;
  
 public class caseSecond extends Applet implements ActionListener   //ActionListener is used for buttons functioning
@@ -8,45 +11,45 @@ public class caseSecond extends Applet implements ActionListener   //ActionListe
 	double v1,v2,result;                                 //Declaration of variables
 	TextField t1;                                        //Textfield for input
 	Button b[]=new Button[10];                           //Buttons for Numbers
-	Button add,sub,mul,div,clear,mod,EQ,dec,pow;         //Buttons for operations
+	Button add,sub,mul,div,EQ;     //Buttons for operations
 	char OP;
 	public void init()                                   //Runs on initialization
 	{
             
 		setBackground(Color.red);                    //Background colour set to red
 		t1=new TextField(10);                        //t1 declared as textfield
-		GridLayout gl=new GridLayout(5,4);           //Gridlines declared
-		setLayout(gl);                               //Gridline set
+		t1.setBounds(140, 70, 200,30);
+		//GridLayout gl=new GridLayout(5,4);           //Gridlines declared
+		//setLayout(gl);                               //Gridline set
+		
+		 //BoxLayout bl=new BoxLayout(0,4);           //Gridlines declared
+		//setLayout(bl);                               //Gridline set
+		
 		for(int i=0;i<10;i++)
 		{
 			b[i]=new Button(""+i);               //Declaration of array of b as buttons
 		}
-                dec=new Button(".");                         //Declaration of . as button dec
+
 		add=new Button("+");                         //Declaration of + as button add
 		sub=new Button("-");                         //Declaration of - as button sub
 		mul=new Button("x");                         //Declaration of x as button mul
 		div=new Button("/");                         //Declaration of / as button div
-		mod=new Button("%");                         //Declaration of % as button mod
-                pow=new Button("^");                         //Declaration of ^ as button pow
-		clear=new Button("CLEAR");                   //Declaration of CLEAR as button clear
 		EQ=new Button("=");                          //Declaration of = as button EQ
                  
          
                 //Adding of buttons and textfields on output window
                 
-		add(t1);                                     //Addition of textfieild      
+		add(t1);                                     //Addition of textfieild
+
 		for(int i=0;i<10;i++)
 		{
 			add(b[i]);                           //Buttons for number added
 		}
-                add(dec);                                    //Button for decimal added
+                                  //Button for decimal added
 		add(add);                                    //Button for addition added
 		add(sub);                                    //Button for subtraction added
 		add(mul);                                    //Button for multiplication added    
-		add(div);                                    //Button for division added    
-		add(mod);                                    //Button for modulous added
-                add(pow);                                    //Button for power added
-		add(clear);                                  //Button for clear added
+		add(div);                                    //Button for division added
 		add(EQ);                                     //Button for equals to added
 		
                 //Adding of action listener for buttons on Display window
@@ -55,14 +58,10 @@ public class caseSecond extends Applet implements ActionListener   //ActionListe
 		{
 			b[i].addActionListener(this);
 		}
-                dec.addActionListener(this);
 		add.addActionListener(this);
 		sub.addActionListener(this);
 		mul.addActionListener(this);
 		div.addActionListener(this);
-		mod.addActionListener(this);
-                pow.addActionListener(this);
-		clear.addActionListener(this);
 		EQ.addActionListener(this);
 	}
  
