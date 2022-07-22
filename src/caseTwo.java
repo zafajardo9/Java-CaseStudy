@@ -32,6 +32,8 @@ public class caseTwo extends Applet implements ActionListener {
 	public void init() {
 		//Grid Layout
 		setLayout(G1); 
+		//Background Color
+		setBackground(Color.blue);
 		//INPUT 1
 		txtResult.setText("");
 		add(txtIn1); 
@@ -132,5 +134,6 @@ public class caseTwo extends Applet implements ActionListener {
 		}
 	}
 	
+
 	
 }
