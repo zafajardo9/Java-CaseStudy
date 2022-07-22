@@ -23,8 +23,6 @@ public class caseTwo extends Applet implements ActionListener {
 	//GridLayout G2 = new GridLayout(1, 4, 10, 10);
 	FlowLayout G2 = new FlowLayout();
 	
-	//GridLayout G3 = new GridLayout(1, 3, 10, 10);
-	
 	Panel P1 = new Panel();
 	Panel P3 = new Panel();
 	Panel P2 = new Panel();
@@ -118,7 +116,7 @@ public class caseTwo extends Applet implements ActionListener {
 		} 
 		
 	}
-		
+	
 	private void convert(String val1, String val2) {
 		if(!(txtIn1.getText().equals("")) && !(txtIn2.getText().equals(""))){
 			num1 = Float.parseFloat(txtIn1.getText());
